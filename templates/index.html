@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solubility Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Solubility Prediction</h1>
+
+        <form action="/predict" method="POST">
+
+            <input type="number" step="any" name="MolLogP" placeholder="MolLogP" required>
+
+            <input type="number" step="any" name="MolWt" placeholder="MolWt" required>
+
+            <input type="number" step="any" name="NumRotatableBonds" placeholder="NumRotatableBonds" required>
+
+            <input type="number" step="any" name="AromaticProportion" placeholder="AromaticProportion" required>
+
+            <button type="submit">Predict</button>
+
+        </form>
+
+        {% if prediction %}
+            <h2>Predicted Solubility: {{ prediction }}</h2>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
