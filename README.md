@@ -51,9 +51,6 @@ The Random Forest Regressor outperformed Linear Regression across all evaluation
 
 Based on these results, the Random Forest Regressor was selected as the final model and integrated into the Flask web application for real-time solubility prediction.
 
-## Model Comparison Graph
-
-![Model Comparison](image.png)
 
 ## Output
 
