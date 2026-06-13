@@ -34,6 +34,24 @@ This project predicts the solubility of chemical compounds using machine learnin
 * NumRotatableBonds
 * AromaticProportion
 
+## Model Comparison
+
+| Model                   | R² Score | MAE    | RMSE   |
+| ----------------------- | -------- | ------ | ------ |
+| Linear Regression       | 0.7892   | 0.7798 | 1.0103 |
+| Random Forest Regressor | 0.8664   | 0.5784 | 0.8043 |
+
+### Analysis
+
+The Random Forest Regressor outperformed Linear Regression across all evaluation metrics:
+
+* Higher **R² Score (0.8664)** indicates better predictive capability.
+* Lower **MAE (0.5784)** indicates smaller average prediction errors.
+* Lower **RMSE (0.8043)** indicates fewer large prediction errors.
+
+Based on these results, the Random Forest Regressor was selected as the final model and integrated into the Flask web application for real-time solubility prediction.
+
+
 ## Output
 
 Predicted Solubility Value
